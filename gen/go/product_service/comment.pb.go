@@ -4,7 +4,7 @@
 // 	protoc        v5.29.3
 // source: product_service/comment.proto
 
-package gppc_product_service
+package grpc_product_service
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -183,7 +183,7 @@ const file_product_service_comment_proto_rawDesc = "" +
 	"\tfull_name\x18\x02 \x01(\tR\bfullName\x12\x14\n" +
 	"\x05image\x18\x03 \x01(\tR\x05image2^\n" +
 	"\aComment\x12S\n" +
-	"\vGetUserData\x12!.product_service.CommentIdRequest\x1a!.product_service.UserDataResponseBgZehttps://github.com/alexkhub/OnlineStoreGo/blob/main/protos/proto/product_service;gppc_product_serviceb\x06proto3"
+	"\vGetUserData\x12!.product_service.CommentIdRequest\x1a!.product_service.UserDataResponseBgZehttps://github.com/alexkhub/OnlineStoreGo/blob/main/protos/proto/product_service;grpc_product_serviceb\x06proto3"
 
 var (
 	file_product_service_comment_proto_rawDescOnce sync.Once

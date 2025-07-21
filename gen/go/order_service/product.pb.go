@@ -4,7 +4,7 @@
 // 	protoc        v5.29.3
 // source: order_service/product.proto
 
-package grpc_grpc_order_service
+package grpc_order_service
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -323,7 +323,7 @@ const file_order_service_product_proto_rawDesc = "" +
 	"\aProduct\x12o\n" +
 	"\x14GetProductCreateCart\x12).order_service.ProductIdCreateCartRequest\x1a,.order_service.ProductDataCreateCartResponse\x12I\n" +
 	"\n" +
-	"GetProduct\x12\x1f.order_service.ProductIdRequest\x1a\x1a.order_service.ProductDataBhZfhttps://github.com/alexkhub/OnlineStoreGo/blob/main/protos/proto/order_service;grpc_grpc_order_serviceb\x06proto3"
+	"GetProduct\x12\x1f.order_service.ProductIdRequest\x1a\x1a.order_service.ProductDataBcZahttps://github.com/alexkhub/OnlineStoreGo/blob/main/protos/proto/order_service;grpc_order_serviceb\x06proto3"
 
 var (
 	file_order_service_product_proto_rawDescOnce sync.Once

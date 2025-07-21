@@ -4,7 +4,7 @@
 // - protoc             v5.29.3
 // source: order_service/product.proto
 
-package grpc_grpc_order_service
+package grpc_order_service
 
 import (
 	context "context"

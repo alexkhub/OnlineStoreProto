@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package order_service;
 
-option go_package  = "https://github.com/alexkhub/OnlineStoreGo/blob/main/protos/proto/order_service;grpc_grpc_order_service";
+option go_package  = "https://github.com/alexkhub/OnlineStoreGo/blob/main/protos/proto/order_service;grpc_order_service";
 
 
 service Product {

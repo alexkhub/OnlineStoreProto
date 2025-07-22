@@ -55,7 +55,7 @@ func (c *productClient) GetProduct(ctx context.Context, in *ProductIdRequest, op
 	err := c.cc.Invoke(ctx, Product_GetProduct_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
-	}
+	} 
 	return out, nil
 }
 

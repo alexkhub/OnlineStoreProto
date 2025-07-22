@@ -19,13 +19,11 @@ message ProductIdCreateCartRequest{
 }
 
 message ProductDataCreateCartResponse{
-    ProductDataCreateCart data = 1;
-}
-
-message ProductDataCreateCart{
     int64 id = 1;
     int64 amount = 2;
 }
+
+
 
 message ProductDataResponse{
     repeated ProductData data = 1;

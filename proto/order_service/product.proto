@@ -20,7 +20,7 @@ message ProductIdCreateCartRequest{
 
 message ProductDataCreateCartResponse{
     int64 id = 1;
-    int64 amount = 2;
+    int64 price = 2;
 }
 
 

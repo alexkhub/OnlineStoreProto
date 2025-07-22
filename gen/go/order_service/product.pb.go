@@ -112,7 +112,7 @@ func (x *ProductIdCreateCartRequest) GetId() int64 {
 type ProductDataCreateCartResponse struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	Id            int64                  `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`
-	Amount        int64                  `protobuf:"varint,2,opt,name=amount,proto3" json:"amount,omitempty"`
+	Price         int64                  `protobuf:"varint,2,opt,name=price,proto3" json:"price,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -154,9 +154,9 @@ func (x *ProductDataCreateCartResponse) GetId() int64 {
 	return 0
 }
 
-func (x *ProductDataCreateCartResponse) GetAmount() int64 {
+func (x *ProductDataCreateCartResponse) GetPrice() int64 {
 	if x != nil {
-		return x.Amount
+		return x.Price
 	}
 	return 0
 }
@@ -265,10 +265,10 @@ const file_order_service_product_proto_rawDesc = "" +
 	"\x10ProductIdRequest\x12\x0e\n" +
 	"\x02id\x18\x01 \x03(\x03R\x02id\",\n" +
 	"\x1aProductIdCreateCartRequest\x12\x0e\n" +
-	"\x02id\x18\x01 \x01(\x03R\x02id\"G\n" +
+	"\x02id\x18\x01 \x01(\x03R\x02id\"E\n" +
 	"\x1dProductDataCreateCartResponse\x12\x0e\n" +
-	"\x02id\x18\x01 \x01(\x03R\x02id\x12\x16\n" +
-	"\x06amount\x18\x02 \x01(\x03R\x06amount\"E\n" +
+	"\x02id\x18\x01 \x01(\x03R\x02id\x12\x14\n" +
+	"\x05price\x18\x02 \x01(\x03R\x05price\"E\n" +
 	"\x13ProductDataResponse\x12.\n" +
 	"\x04data\x18\x01 \x03(\v2\x1a.order_service.ProductDataR\x04data\"1\n" +
 	"\vProductData\x12\x0e\n" +

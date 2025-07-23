@@ -24,13 +24,12 @@ message ProductDataCreateCartResponse{
     string name = 3;
 }
 
-
-
 message ProductDataResponse{
     repeated ProductData data = 1;
 }
 
 message ProductData{
     int64 id = 1;
-    string name = 2;
+    int64 price = 2;
+    string name = 3;
 }

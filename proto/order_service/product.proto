@@ -7,7 +7,7 @@ option go_package  = "https://github.com/alexkhub/OnlineStoreGo/blob/main/protos
 
 service Product {
      rpc GetProductCreateCart(ProductIdCreateCartRequest) returns (ProductDataCreateCartResponse);
-     rpc GetProduct(ProductIdRequest) returns (ProductData);
+     rpc GetProduct(ProductIdRequest) returns (ProductDataResponse);
 }
 
 message ProductIdRequest{

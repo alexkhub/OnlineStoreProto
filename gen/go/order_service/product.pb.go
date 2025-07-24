@@ -291,11 +291,11 @@ const file_order_service_product_proto_rawDesc = "" +
 	"\vProductData\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\x03R\x02id\x12\x14\n" +
 	"\x05price\x18\x02 \x01(\x03R\x05price\x12\x12\n" +
-	"\x04name\x18\x03 \x01(\tR\x04name2\xc5\x01\n" +
+	"\x04name\x18\x03 \x01(\tR\x04name2\xcd\x01\n" +
 	"\aProduct\x12o\n" +
-	"\x14GetProductCreateCart\x12).order_service.ProductIdCreateCartRequest\x1a,.order_service.ProductDataCreateCartResponse\x12I\n" +
+	"\x14GetProductCreateCart\x12).order_service.ProductIdCreateCartRequest\x1a,.order_service.ProductDataCreateCartResponse\x12Q\n" +
 	"\n" +
-	"GetProduct\x12\x1f.order_service.ProductIdRequest\x1a\x1a.order_service.ProductDataBcZahttps://github.com/alexkhub/OnlineStoreGo/blob/main/protos/proto/order_service;grpc_order_serviceb\x06proto3"
+	"GetProduct\x12\x1f.order_service.ProductIdRequest\x1a\".order_service.ProductDataResponseBcZahttps://github.com/alexkhub/OnlineStoreGo/blob/main/protos/proto/order_service;grpc_order_serviceb\x06proto3"
 
 var (
 	file_order_service_product_proto_rawDescOnce sync.Once
@@ -322,7 +322,7 @@ var file_order_service_product_proto_depIdxs = []int32{
 	1, // 1: order_service.Product.GetProductCreateCart:input_type -> order_service.ProductIdCreateCartRequest
 	0, // 2: order_service.Product.GetProduct:input_type -> order_service.ProductIdRequest
 	2, // 3: order_service.Product.GetProductCreateCart:output_type -> order_service.ProductDataCreateCartResponse
-	4, // 4: order_service.Product.GetProduct:output_type -> order_service.ProductData
+	3, // 4: order_service.Product.GetProduct:output_type -> order_service.ProductDataResponse
 	3, // [3:5] is the sub-list for method output_type
 	1, // [1:3] is the sub-list for method input_type
 	1, // [1:1] is the sub-list for extension type_name

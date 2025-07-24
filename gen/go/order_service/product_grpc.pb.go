@@ -28,7 +28,7 @@ const (
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type ProductClient interface {
 	GetProductCreateCart(ctx context.Context, in *ProductIdCreateCartRequest, opts ...grpc.CallOption) (*ProductDataCreateCartResponse, error)
-	GetProduct(ctx context.Context, in *ProductIdRequest, opts ...grpc.CallOption) (*ProductData, error)
+	GetProduct(ctx context.Context, in *ProductIdRequest, opts ...grpc.CallOption) (*ProductDataResponse, error)
 }
 
 type productClient struct {
@@ -49,9 +49,9 @@ func (c *productClient) GetProductCreateCart(ctx context.Context, in *ProductIdC
 	return out, nil
 }
 
-func (c *productClient) GetProduct(ctx context.Context, in *ProductIdRequest, opts ...grpc.CallOption) (*ProductData, error) {
+func (c *productClient) GetProduct(ctx context.Context, in *ProductIdRequest, opts ...grpc.CallOption) (*ProductDataResponse, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
-	out := new(ProductData)
+	out := new(ProductDataResponse)
 	err := c.cc.Invoke(ctx, Product_GetProduct_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
@@ -64,7 +64,7 @@ func (c *productClient) GetProduct(ctx context.Context, in *ProductIdRequest, op
 // for forward compatibility.
 type ProductServer interface {
 	GetProductCreateCart(context.Context, *ProductIdCreateCartRequest) (*ProductDataCreateCartResponse, error)
-	GetProduct(context.Context, *ProductIdRequest) (*ProductData, error)
+	GetProduct(context.Context, *ProductIdRequest) (*ProductDataResponse, error)
 	mustEmbedUnimplementedProductServer()
 }
 
@@ -78,7 +78,7 @@ type UnimplementedProductServer struct{}
 func (UnimplementedProductServer) GetProductCreateCart(context.Context, *ProductIdCreateCartRequest) (*ProductDataCreateCartResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetProductCreateCart not implemented")
 }
-func (UnimplementedProductServer) GetProduct(context.Context, *ProductIdRequest) (*ProductData, error) {
+func (UnimplementedProductServer) GetProduct(context.Context, *ProductIdRequest) (*ProductDataResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetProduct not implemented")
 }
 func (UnimplementedProductServer) mustEmbedUnimplementedProductServer() {}

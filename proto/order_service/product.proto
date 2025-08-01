@@ -8,6 +8,8 @@ option go_package  = "https://github.com/alexkhub/OnlineStoreGo/blob/main/protos
 service Product {
      rpc GetProductCreateCart(ProductIdCreateCartRequest) returns (ProductDataCreateCartResponse);
      rpc GetProduct(ProductIdRequest) returns (ProductDataResponse);
+     rpc GetProductPrice(ProductIdRequest) returns (ProductPriceResponse);
+     rpc GetProductName(ProductIdRequest) returns (ProductNameResponse);
 }
 
 message ProductIdRequest{
@@ -32,4 +34,22 @@ message ProductData{
     int64 id = 1;
     int64 price = 2;
     string name = 3;
+}
+
+message ProductPriceResponse{
+    repeated ProductPrice data = 1;
+}
+
+message ProductPrice{
+    int64 id = 1;
+    int64 price = 2;
+}
+
+message ProductNameResponse{
+    repeated ProductName data = 1;
+}
+
+message ProductName{
+    int64 id = 1;
+     string name = 2;
 }

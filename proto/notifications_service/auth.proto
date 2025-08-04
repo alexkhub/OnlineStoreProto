@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package notification_service;
+
+option go_package  = "https://github.com/alexkhub/OnlineStoreGo/blob/main/protos/proto/notifications_service;grpc_notifications_service";
+
+
+service Auth {
+    rpc GetUserEmail(UserIdRequest) returns (UserEmailResponse);
+}
+
+message UserIdRequest{
+    int64  id = 1;
+}
+
+message UserEmailResponse{
+    string email = 2;
+}

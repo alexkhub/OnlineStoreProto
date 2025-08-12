@@ -24,6 +24,7 @@ const (
 type CodeRequest struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	Code          int64                  `protobuf:"varint,1,opt,name=code,proto3" json:"code,omitempty"`
+	OrderId       int64                  `protobuf:"varint,2,opt,name=order_id,json=orderId,proto3" json:"order_id,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -61,6 +62,13 @@ func (*CodeRequest) Descriptor() ([]byte, []int) {
 func (x *CodeRequest) GetCode() int64 {
 	if x != nil {
 		return x.Code
+	}
+	return 0
+}
+
+func (x *CodeRequest) GetOrderId() int64 {
+	if x != nil {
+		return x.OrderId
 	}
 	return 0
 }
@@ -113,9 +121,10 @@ var File_order_service_notification_proto protoreflect.FileDescriptor
 
 const file_order_service_notification_proto_rawDesc = "" +
 	"\n" +
-	" order_service/notification.proto\x12\rorder_service\"!\n" +
+	" order_service/notification.proto\x12\rorder_service\"<\n" +
 	"\vCodeRequest\x12\x12\n" +
-	"\x04code\x18\x01 \x01(\x03R\x04code\"&\n" +
+	"\x04code\x18\x01 \x01(\x03R\x04code\x12\x19\n" +
+	"\border_id\x18\x02 \x01(\x03R\aorderId\"&\n" +
 	"\fCodeResponse\x12\x16\n" +
 	"\x06status\x18\x01 \x01(\bR\x06status2T\n" +
 	"\fNotification\x12D\n" +

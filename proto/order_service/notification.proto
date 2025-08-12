@@ -11,6 +11,7 @@ service Notification {
 
 message CodeRequest{
     int64 code = 1;
+    int64 order_id = 2;
 }
 
 message CodeResponse{

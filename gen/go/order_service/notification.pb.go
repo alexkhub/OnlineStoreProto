@@ -75,7 +75,6 @@ func (x *CodeRequest) GetOrderId() int64 {
 
 type CodeResponse struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	Status        bool                   `protobuf:"varint,1,opt,name=status,proto3" json:"status,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -110,13 +109,6 @@ func (*CodeResponse) Descriptor() ([]byte, []int) {
 	return file_order_service_notification_proto_rawDescGZIP(), []int{1}
 }
 
-func (x *CodeResponse) GetStatus() bool {
-	if x != nil {
-		return x.Status
-	}
-	return false
-}
-
 var File_order_service_notification_proto protoreflect.FileDescriptor
 
 const file_order_service_notification_proto_rawDesc = "" +
@@ -124,9 +116,8 @@ const file_order_service_notification_proto_rawDesc = "" +
 	" order_service/notification.proto\x12\rorder_service\"<\n" +
 	"\vCodeRequest\x12\x12\n" +
 	"\x04code\x18\x01 \x01(\x03R\x04code\x12\x19\n" +
-	"\border_id\x18\x02 \x01(\x03R\aorderId\"&\n" +
-	"\fCodeResponse\x12\x16\n" +
-	"\x06status\x18\x01 \x01(\bR\x06status2T\n" +
+	"\border_id\x18\x02 \x01(\x03R\aorderId\"\x0e\n" +
+	"\fCodeResponse2T\n" +
 	"\fNotification\x12D\n" +
 	"\tCheckCode\x12\x1a.order_service.CodeRequest\x1a\x1b.order_service.CodeResponseBcZahttps://github.com/alexkhub/OnlineStoreGo/blob/main/protos/proto/order_service;grpc_order_serviceb\x06proto3"
 

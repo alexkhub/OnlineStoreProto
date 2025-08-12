@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package order_service;
+
+option go_package  = "https://github.com/alexkhub/OnlineStoreGo/blob/main/protos/proto/order_service;grpc_order_service";
+
+
+service Notification {
+    rpc CheckCode(CodeRequest) returns (CodeResponse);
+}
+
+message CodeRequest{
+    int64 code = 1;
+}
+
+message CodeResponse{
+    bool status = 1;
+}

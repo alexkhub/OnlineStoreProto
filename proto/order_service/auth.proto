@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package order_service;
+
+option go_package  = "https://github.com/alexkhub/OnlineStoreGo/blob/main/protos/proto/order_service;grpc_order_service";
+
+
+service Auth{
+    rpc GetUserData(UserResponse) returns (UserDataResponse);
+};
+
+message UserResponse{
+    repeated int64 id = 1;
+}
+
+message UserDataResponse{
+    repeated UserData data = 1;
+}
+
+message UserData{
+    int64 id = 1;
+    string email = 2;
+    string full_name = 3;
+}
